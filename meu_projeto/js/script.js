@@ -1,6 +1,6 @@
 // JavaScript code for the To-Do List application
 
-// Array to store tasks with completion status
+// Array to store tasks
 let tasks = [];
 
 // Function to render the task list in the DOM
@@ -8,39 +8,10 @@ function render() {
     const taskList = document.querySelector('#task-list');
     taskList.innerHTML = ''; // Clear the current list
 
-    tasks.forEach((task, index) => {
+    tasks.forEach((task) => {
         const listItem = document.createElement('li');
         listItem.classList.add('task-item');
-        if (task.completed) {
-            listItem.classList.add('completed');
-        }
-
-        // Create checkbox
-        const checkbox = document.createElement('input');
-        checkbox.type = 'checkbox';
-        checkbox.checked = task.completed;
-        checkbox.addEventListener('change', () => {
-            tasks[index].completed = checkbox.checked;
-            render();
-        });
-
-        // Create task text
-        const taskText = document.createElement('span');
-        taskText.classList.add('task-text');
-        taskText.textContent = task.text;
-
-        // Create delete button
-        const deleteBtn = document.createElement('button');
-        deleteBtn.classList.add('task-delete');
-        deleteBtn.textContent = 'Deletar';
-        deleteBtn.addEventListener('click', () => {
-            tasks.splice(index, 1);
-            render();
-        });
-
-        listItem.appendChild(checkbox);
-        listItem.appendChild(taskText);
-        listItem.appendChild(deleteBtn);
+        listItem.textContent = task;
         taskList.appendChild(listItem);
     });
 }
@@ -62,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const taskText = taskInput.value;
 
         if (validarTarefa(taskText)) {
-            tasks.push({ text: taskText, completed: false }); // Add task to the array
+            tasks.push(taskText); // Add task to the array
             render(); // Update the task list
             taskInput.value = ''; // Clear the input field
             errorMessage.textContent = ''; // Clear any previous error messages
