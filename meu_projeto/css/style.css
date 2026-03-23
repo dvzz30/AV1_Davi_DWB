@@ -1,6 +1,8 @@
 body {
     font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #001a4d 0%, #003d99 50%, #0052cc 100%);
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.15), rgba(64, 64, 64, 0.15)), 
+                url('https://i.pinimg.com/736x/08/c0/cb/08c0cbd4b46f4a6a329d987839dd9769.jpg') center/cover no-repeat fixed;
+    background-color: #1a1a1a;
     margin: 0;
     padding: 20px;
     min-height: 100vh;
@@ -16,7 +18,19 @@ body::before {
     transform: translate(-50%, -50%);
     width: 600px;
     height: 600px;
-    background: radial-gradient(circle, rgba(255, 255, 255, 0.15) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.05) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(ellipse at center, transparent 0%, rgba(0, 0, 0, 0.4) 100%);
     pointer-events: none;
     z-index: 0;
 }
@@ -48,7 +62,7 @@ input[type="text"] {
 button {
     padding: 10px 15px;
     margin-left: 10px;
-    background-color: #0be0fc;
+    background-color: #000;
     color: white;
     border: none;
     border-radius: 4px;
@@ -57,7 +71,7 @@ button {
 }
 
 button:hover {
-    background-color: #4cae4c;
+    background-color: #333;
 }
 
 #task-list {
@@ -115,12 +129,12 @@ button:hover {
 }
 
 .edit-btn {
-    background-color: #4cae4c;
+    background-color: #808080;
     color: white;
 }
 
 .edit-btn:hover {
-    background-color: #45a049;
+    background-color: #666666;
 }
 
 .delete-btn {
@@ -200,12 +214,12 @@ button:hover {
 }
 
 #save-btn {
-    background-color: #0be0fc;
+    background-color: #000;
     color: white;
 }
 
 #save-btn:hover {
-    background-color: #09bfe8;
+    background-color: #333;
 }
 
 #cancel-btn {
