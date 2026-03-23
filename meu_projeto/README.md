@@ -1,44 +1,32 @@
-# To-Do List Application
+📝 Lista de Tarefas do Davi (To-Do List)
 
-This is a simple To-Do List web application built using HTML, CSS, and pure JavaScript. The application allows users to add, view, and manage their tasks efficiently.
+Uma aplicação simples e elegante de lista de tarefas desenvolvida com HTML, CSS e JavaScript puro, permitindo adicionar, editar e excluir tarefas de forma dinâmica.
 
-## Project Structure
+🚀 Demonstração
 
-```
-your-project
-├── index.html       # Main HTML document for the To-Do List application
-├── css
-│   └── style.css    # Styles for the To-Do List application
-├── js
-│   └── script.js     # JavaScript functionality for the To-Do List application
-└── README.md        # Documentation for the project
-```
+Interface moderna com:
 
-## Features
+Fundo estilizado
+Modal para edição de tarefas
+Interações dinâmicas sem recarregar a página
+📌 Funcionalidades
 
-- Add new tasks to the list
-- Display the list of tasks
-- Prevent adding empty tasks
-- Simple and clean user interface
+✅ Adicionar novas tarefas
+✅ Editar tarefas existentes (com modal)
+✅ Excluir tarefas com confirmação
+✅ Validação de entrada (evita tarefas vazias)
+✅ Interface responsiva e estilizada
+✅ Atualização dinâmica do DOM
 
-## Getting Started
-
-1. Clone the repository or download the project files.
-2. Open `index.html` in your web browser.
-3. You can start adding tasks to your To-Do List!
-
-## Usage
-
-- Type your task in the input field and click the "Add Task" button or press Enter.
-- Tasks will be displayed below the input field.
-- Empty tasks will not be added, and an error message will be shown.
-
-## Technologies Used
-
-- HTML
-- CSS
-- JavaScript
-
-## Contributing
-
-Feel free to fork the repository and submit pull requests for any improvements or features you'd like to add!
+🛠️ Tecnologias Utilizadas
+HTML5
+CSS3
+JavaScript (Vanilla JS)
+Google Fonts (Poppins)
+📂 Estrutura do Projeto
+📁 projeto
+ ├── index.html
+ ├── css/
+ │    └── style.css
+ └── js/
+      └── script.js
